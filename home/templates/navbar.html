@@ -13,7 +13,7 @@
         <ul class="navbar-nav ms-auto">
         {% if request.path == '/' %}
           <li class="nav-item">
-            <a class="nav-link" href="">Login</a>
+            <a class="nav-link" href="{% url 'catalog'%}">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Link 1b</a>
@@ -29,7 +29,7 @@
         {% endif %}
 
           <li class="nav-item d-flex align-items-center">
-            <a class="btn btn-secondary btn-sm" href="">Link2 </a>
+            <a class="btn btn-secondary btn-sm" href="{% url 'home' %}">Admin</a>
           </li>
   
         </ul>
