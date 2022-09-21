@@ -1,0 +1,16 @@
+{% extends "base_layout.html" %}
+
+
+
+
+
+{% block content %}
+    <p>Hello</p>
+    {% for p in projects %}
+        <p>{{p.name}}</p>
+    {% endfor%}
+    <p>
+        {{ total_projects }}
+    </p>
+    <a href="{% url 'catalog' %}"><button>Catalogo de Libros</button></a>
+{% endblock %}
