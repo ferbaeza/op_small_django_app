@@ -1,16 +1,38 @@
 {% extends "base_layout.html" %}
+{% load static %}
 
 
 
 
 
 {% block content %}
-    <p>Hello</p>
-    {% for p in projects %}
-        <p>{{p.name}}</p>
+    {% for pro in projects %}
+        <p>{{ pro.name }}</p>
+        <p>{{ pro.desccription }}</p>
+        <p>{{ pro.image }}</p>
+        <p>{{ pro.url }}</p>
+    <div class="container" id="gridContainer">
+        <div class="row">
+          <div class="col">
+            <a href="{% url pro.url %}" class="homeLink">
+                <div class="card" style="width: 18rem;">
+                    <img width="100px" height="100px" src="..{{pro.image.url}}" class="card-img-top" alt="{{ pro.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ pro.name }}</h5>
+                        <p class="card-text">{{ pro.description }}</p>
+                    </div>
+                </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
     {% endfor%}
-    <p>
-        {{ total_projects }}
-    </p>
-    <a href="{% url 'catalog' %}"><button>Catalogo de Libros</button></a>
+
 {% endblock %}

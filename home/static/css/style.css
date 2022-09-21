@@ -1,0 +1,15 @@
+.title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#primaryNabvar{
+    background-color: blue;
+}
+#gridContainer{
+    margin: 0 auto;
+    margin-top: 33px;
+}
+.homeLink{
+    text-decoration: none;
+}
