@@ -12,7 +12,7 @@ def index(request):
 
     return render(
         request,
-        "index.html", 
+        "cat.html", 
         context={
             "num_books": num_books,
             "num_instances": num_instances,

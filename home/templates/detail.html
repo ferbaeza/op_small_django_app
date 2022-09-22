@@ -1,0 +1,25 @@
+{% extends "base_layout.html" %}
+{% load static %}
+
+
+
+
+
+{% block content %}
+    {% for pro in project %}
+      <div class="container">
+        <h1>{{ pro.name }}</h1>
+        <p>{{ pro.description }}</p>
+          <img width="100px" height="500px" src="..{{pro.image.url}}" class="card-img-top" alt="{{ pro.name }}">
+        </div>
+
+
+
+
+
+
+
+
+    {% endfor%}
+
+{% endblock %}

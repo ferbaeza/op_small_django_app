@@ -1,12 +1,9 @@
 {% extends "base_layout.html" %}
 {% load static %}
 
-
-
-
-
 {% block content %}
     {% for pro in projects %}
+        <p>{{ pro.id_project }}</p>
         <p>{{ pro.name }}</p>
         <p>{{ pro.desccription }}</p>
         <p>{{ pro.image }}</p>
@@ -14,9 +11,9 @@
     <div class="container" id="gridContainer">
         <div class="row">
           <div class="col">
-            <a href="{% url pro.url %}" class="homeLink">
+            <a class="link" href="{% url 'home:detail_project' pro.id_project  %}" >
                 <div class="card" style="width: 18rem;">
-                    <img width="100px" height="100px" src="..{{pro.image.url}}" class="card-img-top" alt="{{ pro.name }}">
+                    <img width="100px" height="200px" src="..{{pro.image.url}}" class="card-img-top" alt="{{ pro.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ pro.name }}</h5>
                         <p class="card-text">{{ pro.description }}</p>
