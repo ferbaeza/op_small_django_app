@@ -14,5 +14,11 @@
     text-decoration: none;
 }
 .appList{
+color: tomato;
+list-style-type: none;
 list-style: none;
+}
+.side-left{
+    width: 30%;
+    position: fixed;
 }

@@ -26,5 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls, name="admin"),
     path('catalog/', include('catalog.urls')),
     path('home/', include('home.urls')),
+    path('library/', include('library.urls')),
+    path('appStore/', include('appStore.urls')),
+    path('register/', include('register.urls')),
+    path('login/', include('login.urls')),
 
-]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]+static(settings.STATIC_URL, document_root=settings.STATIC_FILES_DIRS)

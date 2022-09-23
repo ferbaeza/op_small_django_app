@@ -11,32 +11,40 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-        {% if request.path == '/' %}
+          {% if request.path == '/register/' %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'catalog'%}">Login</a>
+            <a class="nav-link" href="{% url 'login:login'%}">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Link 1b</a>
+            <a class="nav-link" href="{% url 'register:index'%}">Register</a>
           </li>
           {% endif%}
 
 
-
-        {% if request.path == '/blog/' %}
+        {% if request.path == '/home/' %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'home:home' %}">Home</a>
+            <a class="nav-link" href="{% url 'home:home'%}">Home</a>
           </li>
+          {% endif%}
+          
+
+        {% if request.path == '/login/' %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register:register' %}">Register</a>
+          </li>
+
         {% endif %}
 
           <li class="nav-item d-flex align-items-center m-1">
             <a class="btn btn-warning btn-sm" href="{% url 'login' %}">Login</a>
           </li>
-          <li class="nav-item d-flex align-items-center m-1">
-            <a class="btn btn-warning btn-sm" href="{% url 'home:home' %}">Apps</a>
-          </li>
+        {% if request.user == 'fer' %}
+
           <li class="nav-item d-flex align-items-center">
             <a class="btn btn-secondary btn-sm" href="{% url 'admin:index' %}">Admin</a>
           </li>
+          {% endif %}
+        
 
   
         </ul>

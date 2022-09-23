@@ -6,3 +6,6 @@ from django.http import HttpResponse
 def login(request):
     #return HttpResponse("Hello Login")
     return render(request, "loggin.html")
+
+def index(request):
+    return HttpResponse("Hello Login")

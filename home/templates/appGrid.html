@@ -5,35 +5,52 @@
     {% comment %}
       Esto es un comentario
     {% endcomment %}
-
-
-
-    <ul>
-      {% for app in apps %}
-        <li>{{ app }}</li>
-      {% endfor %}
-      <h5>Aplicaciones cargadas {{ apps|length }}</h5>
-    </ul>
-
-
-
-
-    <div class="container" id="gridContainer">
+    <div class="container">
       <div class="row">
-    {% for pro in projects %}
-          <div class="col">
-            <a class="link" href="{% url 'home:detail_project' pro.id_project  %}" >
-                <div class="card" style="width: 18rem;">
-                  <img width="100px" height="200px" src="{{pro.image.url}}" class="card-img-top" alt="{{ pro.name }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ pro.name }}</h5>
-                        <p class="card-text">{{ pro.description|truncatechars:20 }}</p>
-                    </div>
-                </div>
-            </a>
+        <div class="col-sm-2">
+          <div class="side-left">
+            <ul>
+              {% for app in apps %}
+              <li class="appList">{{ app|upper }}</li>
+              {% endfor %}
+              <div class="app_charged mt-2">
+                <p>Aplicaciones cargadas: {{ apps|length }}</p>
+              </div>
+            </ul>
           </div>
-          {% endfor%}
+        </div>
+
+        <div class="col-sm-10">
+          <div class="container" id="gridContainer">
+            <div class="row">
+          {% for pro in projects %}
+                <div class="col mt-3">
+                  <a class="link" href="{% url 'home:detail_project' pro.id_project  %}" >
+                      <div class="card" style="width: 18rem;">
+                        <img width="100px" height="200px" src="{{pro.image.url}}" class="card-img-top" alt="{{ pro.name }}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{ pro.name }}</h5>
+                              <p class="card-text">{{ pro.description|truncatechars:20 }}</p>
+                          </div>
+                      </div>
+                  </a>
+                </div>
+                {% endfor%}
+              </div>
+            </div>
+    
+
+
         </div>
       </div>
+
+
+
+
+
+
+
+
+      
 
 {% endblock %}
