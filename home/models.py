@@ -38,7 +38,6 @@ class Projects(models.Model):
     description = models.TextField(max_length=1111,blank=True, null=True, help_text="Descripcion de la app")
     image = models.ImageField(default="", upload_to="home/static/images")
     url = models.CharField(max_length=100)
-    img = models.URLField(default="", blank=True)
 
 
     def __str__(self) -> str:
