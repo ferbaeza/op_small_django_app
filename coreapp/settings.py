@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'home',
     'login', 
     'register',
-    'library'
+    'library',
+    'generator'
 ]
 
 MIDDLEWARE = [

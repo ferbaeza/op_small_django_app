@@ -30,5 +30,6 @@ urlpatterns = [
     path('appStore/', include('appStore.urls')),
     path('register/', include('register.urls')),
     path('login/', include('login.urls')),
+    path('generator/', include('generator.urls')),
 
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_FILES_DIRS)
