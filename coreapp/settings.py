@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'login', 
     'register',
     'library',
-    'generator'
+    'generator',
+    'appStore'
 ]
 
 MIDDLEWARE = [
