@@ -1,0 +1,18 @@
+html{
+    background-color: whitesmoke;
+}
+body{
+    background-color: whitesmoke;
+}
+
+.img{
+    width: 300px;
+    height: 280px;
+}
+.bg-black{
+    background-color: #444;
+}
+.link{
+    text-decoration: none;
+    color: #444;
+}

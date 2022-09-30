@@ -36,7 +36,7 @@ class Projects(models.Model):
     id_project = models.UUIDField(primary_key=True, default=uuid4, help_text="Apps creadas")
     name = models.CharField(max_length=100, help_text="App_Name")
     description = models.TextField(max_length=1111,blank=True, null=True, help_text="Descripcion de la app")
-    image = models.ImageField(default="", upload_to="home/static/images")
+    image = models.ImageField(default="", upload_to="home/static/img")
     url = models.CharField(max_length=100)
 
 

@@ -1,0 +1,40 @@
+{% extends 'base_layout.html'%}
+{% load static %}
+{% block content %}
+    <h1 class="title">Library APP</h1>
+    <p>Books: {{ num_books }}</p>
+    <p>Instancias: {{ num_instances }}</p>
+    <p>Cantidad de autores: {{ num_authors }}</p>
+    <p>Libros disponibles: {{ books_avaiables }}</p>
+
+
+    <div class="container">
+
+  
+          <div class="col-sm-10">
+            <div class="container" id="gridContainer">
+              <div class="row">
+            {% for book in books %}
+                  <div class="col mt-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">{{ book.title }}</h3>
+                                <h5 class="card-title">{{ book.author }}</h5>
+                                
+                                <h5 class="card-title">{{ book.genre }}</h5>
+                                <p class="card-text">{{ book.summary|truncatechars:20 }}</p>
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  {% endfor%}
+                </div>
+              </div>
+      
+  
+  
+          </div>
+        </div>
+  
+    
+{% endblock %}

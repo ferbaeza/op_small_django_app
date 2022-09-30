@@ -20,7 +20,7 @@ class Book(models.Model):
     genre = models.ManyToManyField("Genre")
 
     def __str__(self) -> str:
-        return f"{self.title}, {self.author} "
+        return f"{self.title}, {self.author}"
 
     def get_absolute_url(self):
         return reverse("book-detail", args=[str(self.id)])

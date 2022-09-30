@@ -30,5 +30,9 @@ urlpatterns = [
     path('appStore/', include('appStore.urls')),
     path('register/', include('register.urls')),
     path('login/', include('login.urls')),
+    path('portfolio/', include('portfolio.urls')),
+    path('blog/', include('blog.urls')),
 
-]+static(settings.STATIC_URL, document_root=settings.STATIC_FILES_DIRS)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+#]+static(settings.STATIC_URL, document_root=settings.STATIC_FILES_DIRS)
