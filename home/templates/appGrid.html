@@ -24,8 +24,12 @@
           <div class="container" id="gridContainer">
             <div class="row">
           {% for pro in projects %}
+          
                 <div class="col mt-3">
+                  <a class="link" href="{% url 'home:detail_project' pro.url  %}" >
+                    <h1>Go to {{pro.url}}</h1></a>
                   <a class="link" href="{% url 'home:detail_project' pro.id_project  %}" >
+                    <a class="link" href="{% url 'home:detail_project' pro.id_project  %}" >
                       <div class="card" style="width: 18rem;">
                         <img width="100px" height="200px" src="{{pro.image.url}}" class="card-img-top" alt="{{ pro.name }}">
                           <div class="card-body">

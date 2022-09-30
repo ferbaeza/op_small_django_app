@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'library',
     'portfolio',
     'blog',
+    'generator',
+    'appStore'
 ]
 
 MIDDLEWARE = [

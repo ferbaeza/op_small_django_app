@@ -30,8 +30,12 @@ urlpatterns = [
     path('appStore/', include('appStore.urls')),
     path('register/', include('register.urls')),
     path('login/', include('login.urls')),
+<<<<<<< HEAD
     path('portfolio/', include('portfolio.urls')),
     path('blog/', include('blog.urls')),
+=======
+    path('generator/', include('generator.urls')),
+>>>>>>> 41b9ee9324fc44ba55e75c3b613f3dff172a38a7
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
