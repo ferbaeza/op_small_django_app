@@ -9,6 +9,7 @@ django-debug = "*"
 django-debug-toolbar = "*"
 pillow = "*"
 python-decouple = "*"
+django-seed = "*"
 
 [dev-packages]
 

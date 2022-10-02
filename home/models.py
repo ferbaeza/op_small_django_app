@@ -15,8 +15,8 @@ def get_app_installed():
             pprint(a)
             lista_apps.append(a[0])
     #pprint(lista_apps)
-    pprint(f"Lista apps instaladas {lista_apps}")
-    pprint("-------------------------------------------")
+    # pprint(f"Lista apps instaladas {lista_apps}")
+    # pprint("-------------------------------------------")
     #TODO Insert this apps into db 
 
     return lista_apps

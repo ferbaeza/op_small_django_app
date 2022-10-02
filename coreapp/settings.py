@@ -15,8 +15,8 @@ import os
 from pprint import pprint
 from decouple import config
 
-API_USERNAME = config('USER')
-pprint(API_USERNAME)
+# API_USERNAME = config('USER')
+# pprint(API_USERNAME)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'portfolio',
     'blog',
     'generator',
+    'django_seed',
     'appStore'
 ]
 
