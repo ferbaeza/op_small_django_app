@@ -32,7 +32,7 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('portfolio/', include('portfolio.urls')),
     path('blog/', include('blog.urls')),
-    path('generator/', include('generator.urls')),
+    path('generator', include('generator.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
