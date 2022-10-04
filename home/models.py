@@ -23,15 +23,6 @@ def get_app_installed():
 
 t= get_app_installed()
 
-
-
-
-
-
-
-
-
-
 class Projects(models.Model):
     id_project = models.UUIDField(primary_key=True, default=uuid4, help_text="Apps creadas")
     name = models.CharField(max_length=100, help_text="App_Name")
