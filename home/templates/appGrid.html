@@ -27,7 +27,7 @@
           
                 <div class="col mt-3">
                   <a class="link" href="{% url 'home:detail_project' pro.url  %}" >
-                    <h1>Go to {{pro.url}}</h1></a>
+                    <h1>Go {{pro.url|truncatechars:7}}</h1></a>
                   <a class="link" href="{% url 'home:detail_project' pro.id_project  %}" >
                     <a class="link" href="{% url 'home:detail_project' pro.id_project  %}" >
                       <div class="card" style="width: 18rem;">

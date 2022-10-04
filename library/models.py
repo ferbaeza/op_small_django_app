@@ -1,3 +1,4 @@
+from email.policy import default
 import uuid
 from django.db import models
 from django.urls import reverse
@@ -5,7 +6,7 @@ import uuid
 
 # Create your models here.
 class Genre(models.Model):
-    name= models.CharField(max_length=65, help_text="Pon el nombre del genero")
+    name= models.CharField(max_length=65,default="Literatura", help_text="Pon el nombre del genero")
 
 
     def __str__(self) -> str:

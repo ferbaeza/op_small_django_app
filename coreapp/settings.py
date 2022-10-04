@@ -45,15 +45,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'catalog',
-    'home',
+    'django_seed',
     'login', 
     'register',
+    'home',
     'library',
     'portfolio',
     'blog',
     'generator',
-    'django_seed',
+    'catalog',
     'appStore'
 ]
 
