@@ -24,7 +24,6 @@ from login import views
 urlpatterns = [
     path('', views.login, name="login"),
     path('admin/', admin.site.urls, name="admin"),
-    path('catalog/', include('catalog.urls')),
     path('home/', include('home.urls')),
     path('library/', include('library.urls')),
     path('appStore/', include('appStore.urls')),

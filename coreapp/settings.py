@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'portfolio',
     'blog',
     'generator',
-    'catalog',
     'appStore'
 ]
 

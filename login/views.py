@@ -5,11 +5,11 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def login(request):
-    username = request.GET.get('username')
-    password = request.GET.get('password')
-    entry = User.objects.get(username=username)
-    if entry.username == username and entry.password == password:
-        pprint(username+" Coincide")
+    # username = request.GET.get('username')
+    # password = request.GET.get('password')
+    # entry = User.objects.get(username=username)
+    # if entry.username == username and entry.password == password:
+    #     pprint(username+" Coincide")
     
     
     
