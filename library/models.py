@@ -59,3 +59,4 @@ class Author(models.Model):
 
     def __str__(self) -> str:
         return "%s %s"%(self.first_name, self.last_name)
+    
