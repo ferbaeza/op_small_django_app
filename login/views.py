@@ -16,7 +16,10 @@ def login(request):
     users = User.objects.all()
     super = User.objects.filter(is_superuser=1)
     pprint(super)
-    return render(request, "loggin.html", {"super":super, "users":users})
-
+    if request.user == super:
+        return render(request, "appGrid.html", {"super":super, "users":users})
+    else:
+        return render(request, "loggin.html", {"super":super, "users":users})
+        
 def index(request):
     return HttpResponse("Hello Login")
